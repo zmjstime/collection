@@ -1,0 +1,45 @@
+姓名		name
+性别		sex
+年龄		age
+病员号		patientID
+标本号		sampleID
+采样时间	sampleDate
+科室		administrativeOffice
+床号		bedID
+标本类型	sampleType
+送检医生	senderDoctor
+
+微蛋白		ALB
+尿肌酐		CRE
+ACR = 微蛋白/尿肌酐
+
+检测时间	detectionDate
+报告时间	reportDate
+检验者		proofer
+审核者		auditor
+备注		remarks
+
+CREATE TABLE [urinalysisInfo](
+    [name] NVARCHAR NOT NULL, 
+    [sex] NVARCHAR NOT NULL, 
+    [age] INT NOT NULL, 
+    [patientID] VARCHAR NOT NULL, 
+    [sampleID] INT NOT NULL, 
+    [sampleDate] DATETIME NOT NULL, 
+    [administrativeOffice] NVARCHAR NOT NULL, 
+    [bedID] INT NOT NULL, 
+    [sampleType] NVARCHAR NOT NULL, 
+    [senderDoctor] NVARCHAR NOT NULL, 
+    [ALB] FLOAT NOT NULL, 
+    [CRE] FLOAT NOT NULL, 
+    [detectionDate] DATETIME NOT NULL, 
+    [reportDate] DATETIME NOT NULL, 
+    [proofer] NVARCHAR NOT NULL, 
+    [auditor] NVARCHAR NOT NULL, 
+    [remarks] NVARCHAR);
+
+insert into urinalysisInfo values ('阿三','男', 18, 1111002, 226654488, '2016-10-19 00:00:00.000', '内科',
+193,'尿','王麻子',30.0,300.0,'2016-10-19 00:00:00.000','2016-10-21 00:00:00.000','李四','王五','这是备注');
+
+insert into urinalysisInfo values ('是三','女', 18, 11331002, 226654488, '2016-10-19 00:00:00.000', '外科',
+193,'尿','王麻子',30.0,300.0,'2016-10-19 00:00:00.000','2016-10-21 00:00:00.000','李四','王五','这是备注');
